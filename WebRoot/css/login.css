@@ -1,108 +1,65 @@
-
 body{
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-color: #389444;
+	background: #ddd
 }
-.header{
+.loginwarrp{
+	margin: 250px auto;
+    width: 400px;
+    padding: 30px 50px;
+    background: #FFFFFF;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: 'Î¢ÈíÑÅºÚ','ÎÄÈªæäÕýºÚ','ºÚÌå';
+}
+.loginwarrp .logo{
 	width:100%;
-	height:41px;
-	background: url(../img/login/login-top-bg.gif) repeat-x;
-	line-height: 41px;
-	color: #ffffff;
-	font-size: 12px;
-	padding-left: 10px;
+	height:44px;
+	line-height: 44px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom:1px solid #ddd;
 }
-.center{
-	width:100%;
-	height:532px;
-	background: url(../img/login/login_bg.jpg) repeat-x;
+.loginwarrp .login_form{
+	margin-top: 15px;
 }
-.login_right{
-	float:right;
-	width:50%;
-	height:100%;
-	background: url(../img/login/login-wel.gif) bottom no-repeat;
+.loginwarrp .login_form .login-item{
+	padding: 2px 8px;
+	border:1px solid #dedede;
+	border-radius: 8px;
+	margin-top: 10px;
 }
-.login_left{
-	float:right;
-	width:295px;
-	height:100%;
-	background: url(../img/login/login-content-bg.gif) no-repeat;
+.loginwarrp .login_form .login_input{
+	height: 35px;
+    border: none;
+    line-height: 35px;
+    width: 200px;
+    font-size: 14px;
+    outline: none;
 }
-.login_title{
-	margin-left:35px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	height:36px;
-	line-height: 36px;
-	color: #666666;
-	font-weight: bold;
+.loginwarrp .login_form .verify{
+	float: left;
 }
-.login_info{
-	margin-left:35px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	height:36px;
-	line-height: 36px;
-	color: #333333;
+.loginwarrp .verify .verify_input{
+	width: 160px;
 }
-.login_input{
-	width:150px;
-	height:20px;
-	margin-left:30px;
-	border:1px solid #7F9DB9;
-	vertical-align: middle;
+.loginwarrp .verifyimg{
+	height: 30px;
+    margin: 20px 0 0 20px;
 }
-.login_code{
-	width:70px;
-	height:20px;
-	margin-left:30px;
-	border:1px solid #7F9DB9;
-	vertical-align: middle;
+.loginwarrp .login-sub{
+	text-align: center;
 }
-.btn{
-	width:60px;
-	height:25px;
-	border-width:0px;
-	background-image: url(../img/login/btn-bg2.gif);
-	letter-spacing: 3px;
-	margin-right:70px;
-	cursor: pointer;
+.loginwarrp .login-sub input{
+	margin-top:15px;
+    background: #45B549;
+    line-height: 35px;
+    width: 150px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Î¢ÈíÑÅºÚ','ÎÄÈªæäÕýºÚ','ºÚÌå';
+    border: none;
+    border-radius: 5px;
 }
-.login_info img{
-	vertical-align: middle;
-	cursor: pointer;
-}
-
-.errInfo{
-	display:none;
-	color:red;
-}
-
-.logo{
-	width:100%;
-	height:68px;
-	background: url(../img/login/logo2.png) no-repeat;
-	_background:none;
-	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo2.png';)
-}
-.left_txt{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	line-height: 25px;
-	color: #666666;
-}
-
-.bottom{
-	width:100%;
-	height:20px;
-	text-align:center;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #ffffff;
-	text-decoration: none;
-	line-height: 20px;
+.loginwarrp .login_form .login-item .error{
+	color: #F00;
+	font-family: 'Î¢ÈíÑÅºÚ','ÎÄÈªæäÕýºÚ','ºÚÌå';
 }

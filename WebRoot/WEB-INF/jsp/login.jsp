@@ -5,60 +5,46 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XXX管理系统后台</title>
-
-<link rel="stylesheet" type="text/css" href="css/login.css">
-
+<title>生鲜果蔬管理系统</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/login.css" />
 <script src="js/easyui/jquery.min.js" type="text/javascript"></script>
 </head>
-<div
-	style="width: 100%; height: 90%; position: absolute; top: 50%; left: 50%; margin-top: -320px; margin-left: -50%;">
-	<div class="header">欢迎使用</div>
-	<div class="center">
-		<div class="login_right">
-			<div style="width: 100%; height: auto; margin-top: 150px;">
-				<form action="login" method="post" name="loginForm" id="loginForm"
-					class="loginForm">
-					<div class="login_info">
-						<label>用户名：</label> 
-						<input type="text" name="loginname" id="loginname" class="login_input" value="${loginname }" />
-						<span id="nameerr" class="errInfo"></span>
-					</div>
-					<div class="login_info">
-						<label>密 &nbsp;&nbsp;&nbsp;码：</label>
-						<input type="password" name="password" id="password" class="login_input" value="${password }" /> 
-						<span id="pwderr" class="errInfo"></span>
-					</div>
-					<div class="login_info">
-						<label>验证码：</label> <input type="text" name="code" id="code" class="login_input" />
-						<span id="codeerr" class="errInfo"></span>
-					</div>
-					<div class="login_info">
-						<label> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-						<img id="codeImg" alt="点击更换" title="点击更换" src="" />
-					</div>
-					<p>
-					<div class="login_info">
-						<input type="button" name="loginBtn" id="loginBtn" value="登录" class="btn" onclick="login()" /> 
-						<label> </label> 
-						<input type="reset" name="cancelBtn" id="cancelBtn" value="取消" class="btn" />
-					</div>
-					<div class="login_info">
-						<input type="checkbox" id="autologin" name="autologin" class="autologin" value="" style="margin: 0px; vertical-align: middle; padding: 0px; width: 16px; height: 16px; font-size: 20px;" />&nbsp;一周内自动登录
-						<input type="hidden" id="autologinch" name="autologinch" class="autologinch" value="" />
-					</div>
-				</form>
-			</div>
-		</div>
-		<div class="login_left">
-			<div style="width: 100%; height: auto; margin-top: 150px;">
-				<div class="logo"></div>
-				<div class="left_txt"></div>
-			</div>
+<div class="page">
+	<div class="loginwarrp">
+		<div class="logo">管理员登录</div>
+		<div class="login_form">
+			<form action="login" method="post" name="loginForm" id="loginForm">
+				<li class="login-item"><span>用户名：</span> <input type="text"
+					id="loginname" name="loginname" class="login_input"
+					value="${loginname }"> <span id="nameerr" class="errInfo"></span>
+				</li>
+
+				<li class="login-item"><span>密 码：</span> <input type="password"
+					id="password" name="password" class="login_input"
+					value="${password }"> <span id="pwderr" class="errInfo"></span>
+				</li>
+
+				<li class="login-item verify"><span>验证码：</span> <input
+					type="text" name="code" id="code" class="login_input" /> <span
+					id="codeerr" class="errInfo"></span></li> <img id="codeImg" alt="点击更换"
+					title="点击更换" src="" class="verifyimg" />
+				<p>
+				<div class="clearfix"></div>
+				<li class="login-sub"><input type="button" name="loginBtn"
+					id="loginBtn" value="登录" onclick="login()" /> <input type="reset"
+					name="cancelBtn" id="cancelBtn" value="取消" /></li>
+				<br>
+				<li class="login-sub"><input type="checkbox" id="autologin"
+					name="autologin" value=""
+					style="margin: 0px; vertical-align: middle; padding: 0px; width: 16px; height: 16px; font-size: 20px;" />&nbsp;一周内自动登录
+					<input type="hidden" id="autologinch" name="autologinch" value="" />
+				</li>
+			</form>
 		</div>
 	</div>
-	<div class="bottom">Copyright &copy; 2018 北京启明科技有限公司</div>
 </div>
+</body>
 <script type="text/javascript">
 	var errInfo = "${errInfo}";
 	$(document).ready(function() {
@@ -125,6 +111,22 @@
 		check();
 		document.loginForm.submit();
 	}
+	
+	window.onload = function() {
+		var config = {
+			vx : 4,
+			vy : 4,
+			height : 2,
+			width : 2,
+			count : 100,
+			color : "121, 162, 185",
+			stroke : "100, 200, 180",
+			dist : 6000,
+			e_dist : 20000,
+			max_conn : 10
+		}
+		CanvasParticle(config);
+	}
 </script>
-</body>
+<script type="text/javascript" src="js/easyui/canvas-particle.js"></script>
 </html>
