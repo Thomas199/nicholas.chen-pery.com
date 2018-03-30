@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>客户关系管理系统</title>
+<title>生鲜果蔬管理系统</title>
 
 <STYLE>
 .main_header {
@@ -76,7 +76,7 @@
 		<div class="easyui-tabs" id="mainTabs" fit="true" border="false">
 			<div title="欢迎使用" style="padding: 20px;">
 				<div style="margin-top: 20px; float: left; min-width: 600px; widht: 600px; height: 90%;">
-					<h1 style="font-size: 24px;">欢迎使用项目管理系统</h1>
+					<h1 style="font-size: 24px;">欢迎使用生鲜果蔬管理系统</h1>
 				</div>
 			</div>
 		</div>
