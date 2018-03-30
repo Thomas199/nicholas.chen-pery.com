@@ -7,7 +7,6 @@ import java.util.Date;
 
 /**
  * 客户联系人
- * @author zh
  */
 public class Contact {
 	private int id;

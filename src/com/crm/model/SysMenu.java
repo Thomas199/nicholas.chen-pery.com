@@ -1,13 +1,9 @@
-/**
- * 
- */
 package com.crm.model;
 
 import java.util.List;
 
 /**
  * @author zh
- * 2014-8-1
  */
 public class SysMenu {
 	/**

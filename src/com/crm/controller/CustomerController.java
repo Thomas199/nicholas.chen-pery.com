@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.crm.controller;
 
 import java.util.List;
@@ -21,9 +18,6 @@ import com.crm.model.easyui.Json;
 import com.crm.model.easyui.PageHelper;
 import com.crm.service.CustomerService;
 
-/**
- * @author zh
- */
 @Controller
 public class CustomerController {
 	

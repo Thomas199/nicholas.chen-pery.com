@@ -57,12 +57,6 @@ public class SystemdefController extends BaseController {
 			if(systemdef.getCountChildrens() > 0){	//有子节点
 				node.setState("closed");
 			}
-			
-			/*
-			Map<String, Object> attr = new HashMap<String, Object>();
-			attr.put("url", systemdef.getUrl());
-			node.setAttributes(attr);
-			*/
 			treeList.add(node);
         }
     	return treeList;

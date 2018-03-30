@@ -1,12 +1,8 @@
-/**
- * 
- */
 package com.crm.model;
 
 import java.util.List;
 
 /**
- * @author zh
  * 部门信息
  */
 public class Systemdef {

@@ -13,11 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.crm.util.common.RandomCodeUtil;
 
-/**
- * 
- * @author zh
- *
- */
+
 @Controller
 public class CodeController {
 	

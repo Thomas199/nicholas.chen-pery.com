@@ -1,13 +1,9 @@
-/**
- * 
- */
 package com.crm.model;
 
 import java.util.Date;
 
 /**
  * 拜访记录
- * @author zh
  */
 public class Visitlog {
 	private int id;

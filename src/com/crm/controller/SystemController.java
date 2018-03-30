@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.crm.controller;
 
 import java.util.ArrayList;
@@ -30,10 +27,7 @@ import com.crm.util.RequestUtil;
 import com.crm.util.UserCookieUtil;
 import com.crm.util.common.Const;
 
-/**
- * @author zh
- * 2014-7-26
- */
+
 @Controller
 public class SystemController extends BaseController {
 	private final Logger log = LoggerFactory.getLogger(SystemController.class);

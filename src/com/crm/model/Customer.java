@@ -1,11 +1,7 @@
-/**
- * 
- */
 package com.crm.model;
 
 /**
  * 客户信息
- * @author zh
  */
 public class Customer {
 	private int id;

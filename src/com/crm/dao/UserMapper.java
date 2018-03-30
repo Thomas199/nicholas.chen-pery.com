@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.crm.dao;
 
 import java.util.List;
@@ -11,10 +8,7 @@ import com.crm.model.SysMenu;
 import com.crm.model.User;
 import com.crm.model.easyui.PageHelper;
 
-/**
- * @author zh
- * 2014-8-2
- */
+
 public interface UserMapper {
 
 	public User findUserByName(@Param("username") String username);

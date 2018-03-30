@@ -1,12 +1,6 @@
-/**
- * 
- */
 package com.crm.model;
 
-/**
- * @author zh
- * 2014-8-1
- */
+
 public class User {
 	private int id;
 	private String username;

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.crm.dao;
 
 import java.util.List;
@@ -12,10 +9,6 @@ import com.crm.model.Customer;
 import com.crm.model.Visitlog;
 import com.crm.model.easyui.PageHelper;
 
-/**
- * @author zh
- * 2014-8-2
- */
 public interface CustomerMapper {
 
 	//根据名称查询

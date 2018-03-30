@@ -147,7 +147,6 @@ public class MenuController extends BaseController {
         return j;
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////
     /**
       * 创建一颗树，以json字符串形式返回
       * @param list 原始数据列表
