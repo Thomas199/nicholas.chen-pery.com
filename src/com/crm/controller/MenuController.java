@@ -28,7 +28,11 @@ import javax.annotation.Resource;
 
 import javax.servlet.http.HttpServletResponse;
 
-
+/**
+ * 菜单树
+ * @author momo
+ *
+ */
 @Controller
 @RequestMapping(value = "/menu")
 public class MenuController extends BaseController {

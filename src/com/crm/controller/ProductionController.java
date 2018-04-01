@@ -12,31 +12,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.crm.model.Customer;
+import com.crm.model.Production;
 import com.crm.model.easyui.DataGrid;
 import com.crm.model.easyui.Json;
 import com.crm.model.easyui.PageHelper;
-import com.crm.service.CustomerService;
+import com.crm.service.ProductionService;
 
 /**
- * 客户管理
+ * 产品管理
  * @author momo
  */
 @Controller
-public class CustomerController {
+public class ProductionController {
 	
-	private final Logger log = LoggerFactory.getLogger(CustomerController.class);
+	private final Logger log = LoggerFactory.getLogger(ProductionController.class);
 	
 	@Resource
-	private CustomerService customerService;
+	private ProductionService productionService;
 	
 	/**
-	 * 跳转到客户表格页面
+	 * 跳转到产品表格页面
 	 * @return
 	 */
-	@RequestMapping(value = "/customer/list",method = RequestMethod.GET)
-    public String customerList(Model model) {
-        return "crm/customer_list";
+	@RequestMapping(value = "/production/list",method = RequestMethod.GET)
+    public String productionList(Model model) {
+        return "crm/production_list";
     }
 	
 	/**
@@ -44,11 +44,11 @@ public class CustomerController {
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping(value="/customer/datagrid", method = RequestMethod.POST)
-	public DataGrid datagrid(PageHelper page,Customer customer) {
+	@RequestMapping(value="/production/datagrid", method = RequestMethod.POST)
+	public DataGrid datagrid(PageHelper page,Production production) {
 		DataGrid dg = new DataGrid();
-		dg.setTotal(customerService.getDatagridTotal(customer));
-		List<Customer> list = customerService.datagridCustomer(page);
+		dg.setTotal(productionService.getDatagridTotal(production));
+		List<Production> list = productionService.datagridProduction(page);
 		dg.setRows(list);
 		return dg;
 	}
@@ -58,15 +58,14 @@ public class CustomerController {
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping(value = "/customer/add",method = RequestMethod.POST)
-    public Json add(Customer customer) {
+	@RequestMapping(value = "/production/add",method = RequestMethod.POST)
+    public Json add(Production production) {
 		Json j = new Json();
-		
 		try {
-			customerService.addCustomer(customer);
+			productionService.addProduction(production);
             j.setSuccess(true);
-            j.setMsg("用户新增成功！");
-            j.setObj(customer);
+            j.setMsg("产品新增成功！");
+            j.setObj(production);
         } catch (Exception e) {
             j.setMsg(e.getMessage());
         }
@@ -79,15 +78,15 @@ public class CustomerController {
      * @return
      */
 	@ResponseBody
-    @RequestMapping(value = "/customer/edit",method = RequestMethod.POST)
-    public Json editUser(Customer customer) {
+    @RequestMapping(value = "/production/edit",method = RequestMethod.POST)
+    public Json editUser(Production production) {
         Json j = new Json();
-        log.debug("穿过来的用户ID为："+customer.getId());
+        log.debug("穿过来的用户ID为："+production.getId());
         try {
-        	customerService.editCustomer(customer);
+        	productionService.editProduction(production);
             j.setSuccess(true);
             j.setMsg("编辑成功！");
-            j.setObj(customer);
+            j.setObj(production);
         } catch (Exception e) {
             j.setMsg(e.getMessage());
         }
@@ -99,12 +98,12 @@ public class CustomerController {
 	 * @param out
 	 */
 	@ResponseBody
-	@RequestMapping(value = "/customer/delete",method = RequestMethod.POST)
-	public Json delete(Customer customer) {
+	@RequestMapping(value = "/production/delete",method = RequestMethod.POST)
+	public Json delete(Production production) {
 		Json j = new Json();
-        log.debug("穿过来的用户ID为："+customer.getId());
+        log.debug("穿过来的用户ID为："+production.getId());
         try {
-        	customerService.deleteCustomer(customer.getId());
+        	productionService.deleteProduction(production.getId());
 			j.setSuccess(true);
 	        j.setMsg("删除成功！");
         } catch (Exception e) {

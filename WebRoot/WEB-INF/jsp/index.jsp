@@ -13,7 +13,7 @@
 	width: 100%;
 	height: 64px;
 	margin: 0px;
-	background: url("${path}/img/login_bg.jpg") repeat-x;
+	background: #838B83;
 	overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
 	float: left;
 	width: 262px;
 	height: 100%;
-	background: url("${path}/img/logo2.png");
+	background: #838B83;
 }
 </STYLE>
 
@@ -31,17 +31,18 @@
 <body class="easyui-layout">
 	<!-- 正上方panel -->
 	<div data-options="region:'north',border:false"
-		style="height: 60px; background: #46B43B; padding: 0px">
+		style="height: 60px; background: #838B83; padding: 0px">
 		<div class="header_left"></div>
 		<div id="sessionInfoDiv"
 			style="position: absolute; right: 5px; top: 10px;">
-			<strong><%=user.getUsername()%></SPAN></strong>&nbsp;欢迎你！ <SPAN id=clock style="color: blue;"></SPAN>
+			<strong><%=user.getUsername()%></SPAN></strong>&nbsp;欢迎你！ <SPAN id=clock
+				style="color: blue;"></SPAN>
 			<SCRIPT type=text/javascript>
 				var clock = new Clock();
 				clock.display(document.getElementById("clock"));
 			</SCRIPT>
 		</div>
-		
+
 		<div style="position: absolute; right: 0px; bottom: 0px;">
 			<a href="javascript:void(0);" class="easyui-menubutton"
 				data-options="menu:'#layout_north_pfMenu',iconCls:'icon-ok'">更换皮肤</a>
@@ -66,7 +67,8 @@
 	</div>
 
 	<!-- 左侧菜单 -->
-	<div data-options="region:'west',href:''" title="导航菜单" style="width: 200px; padding: 0px;">
+	<div data-options="region:'west',href:''" title="导航菜单"
+		style="width: 200px; padding: 0px;">
 		<ul id="mainMenu"></ul>
 	</div>
 
@@ -75,7 +77,8 @@
 	<div region="center">
 		<div class="easyui-tabs" id="mainTabs" fit="true" border="false">
 			<div title="欢迎使用" style="padding: 20px;">
-				<div style="margin-top: 20px; float: left; min-width: 600px; widht: 600px; height: 90%;">
+				<div
+					style="margin-top: 20px; float: left; min-width: 600px; widht: 600px; height: 90%;">
 					<h1 style="font-size: 24px;">欢迎使用生鲜果蔬管理系统</h1>
 				</div>
 			</div>

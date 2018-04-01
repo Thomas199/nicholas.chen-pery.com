@@ -13,7 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.crm.util.common.RandomCodeUtil;
 
-
+/**
+ * 
+ * 验证码
+ * @author momo
+ *
+ */
 @Controller
 public class CodeController {
 	
